@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Banner</title>
+    <style>
+        /* Fixes some minot isses with button textbox not aligned */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* The banner container */
+        .banner-container {
+            position: sticky;
+            top: 0;
+            background-color: #ffffff; /* Set a background color for the banner */
+            padding: 30px; /* manipulate this */
+        }
+
+        .banner-container form {
+            display: flex;
+            flex-direction: column; /* Vertically align the form elements */
+        }
+
+        .banner-container textarea {
+            width: 100%; /* Make the textarea full screen */
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the textarea */
+        }
+
+        .banner-container button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #e9e9e9; /* Set a dark color for the button */
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        banner-container input[type="hidden"] {
+            display: none; /* Hide the hidden input */
+        }
+
+        /* The content container with sticky scrolling */
+        .content-container {
+            padding-top: 50px; /* Add some space for the banner */
+            overflow-y: auto; /* Enable vertical scrollbar on hover */
+        }
+
+        .content-container p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- The banner container -->
+    <div class="banner-container">
+        <form>
+            <textarea id="input" placeholder="Enter your message" cols="50"></textarea>
+            <button type="submit" class="">Send</button>
+            <!-- Add a hidden input to track if shift+enter is pressed -->
+            <input type="hidden" id="shift-enter-pressed">
+        </form>
+    </div>
+
+    <!-- The content container with sticky scrolling -->
+    <div class="content-container">
+        <!-- Your long text here -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        <p>Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <p>
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+                </p>
+        <!-- Add more text here -->
+    </div>
+
+    <script>
+        // Add an event listener to the form submit event
+        document.querySelector('.banner-container form').addEventListener('submit', function(event) {
+            // Get the value of the textarea
+            const inputValue = document.getElementById('input').value;
+
+            // Get the value of the hidden input
+            const shiftEnterPressed = document.getElementById('shift-enter-pressed').value;
+
+            // Do something with the input values...
+            console.log(`Input Value: ${inputValue}`);
+            console.log(`Shift+Enter Pressed: ${shiftEnterPressed}`);
+
+            // Prevent the default form submission behavior
+            event.preventDefault();
+        });        
+    </script>
+</body>
+</html>

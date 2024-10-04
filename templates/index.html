@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Streaming Example</title>
+    <style>
+
+        /*
+        form {            
+            flex-direction: row;
+            align-items: start;
+            justify-content: flex-evenly;
+        }*/
+
+        .container-form {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center
+
+
+        }
+
+        .old-answer:hover {
+            font-size: 120%;
+        }
+
+        body {
+            height: 100vh;
+            padding: 10px;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            display: inline;
+            max-width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="bla">
+
+    <form>
+        <div class="container-form">
+            <div>
+                <textarea id="input" placeholder="Enter your message" cols="50"></textarea>
+            </div>
+            <div style="padding: 5px">
+                <button type="submit" >Send</button>
+            </div>
+        </div>
+        <!-- Add a hidden input to track if shift+enter is pressed -->
+        <input type="hidden" id="shift-enter-pressed">
+    </form>
+
+    <pre id="current_answer"></pre>
+    <pre id="chat_history"></pre>
+
+    </div>
+
+    
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        const current_answer = document.getElementById('current_answer');
+        const submit_btn = document.querySelector('button');
+        const input = document.getElementById('input');
+
+        submit_btn.addEventListener("click", async (e) => {
+            e.preventDefault();
+
+            const response = await fetch("/answer", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({message: input.value})
+            });
+
+            const chat_history = document.getElementById('chat_history');
+            const newParagraph = document.createElement('p');
+            newParagraph.className = "old-answer"
+            newParagraph.textContent = input.value;
+            newParagraph.style.textAlign = "right";
+            newParagraph.style.maxWidth = "100%"; 
+            //chat_history.appendChild(newParagraph);
+            chat_history.insertBefore(newParagraph, chat_history.firstChild)
+
+            const reader = response.body.getReader();
+            let output = "";
+
+            while (true) {
+                const { done, value } = await reader.read();
+                output += new TextDecoder().decode(value);
+                current_answer.innerHTML = marked.parse(output);
+
+                if (done) {
+                    return;
+                }
+            }
+
+        })
+    </script>
+    <script>
+        /*
+        const textarea = document.getElementById('input');
+        const submitButton = document.querySelector('button[type=submit]');
+        const shiftEnterPressedInput = document.getElementById('shift-enter-pressed');
+      
+        // Add event listener to textarea
+        textarea.addEventListener('keydown', (event) => {
+          if (event.shiftKey && event.key === 'Enter') {
+            // Send the form when shift+enter is pressed
+            submitForm();
+          }
+        });
+      
+        function submitForm() {
+          shiftEnterPressedInput.value = true; // Set value to true for tracking purposes
+          submitButton.click(); // Simulate click on submit button
+          document.getElementById('shift-enter-pressed').value = ''; // Reset input value
+        }
+      
+        // Add event listener to input to reset when form is submitted
+        shiftEnterPressedInput.addEventListener('input', () => {
+          if (shiftEnterPressedInput.value === '') {
+            console.log('Shift+enter not pressed');
+          }
+        });
+        */
+      </script>
+</body>
+</html>
