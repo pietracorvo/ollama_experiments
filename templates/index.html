@@ -18,8 +18,6 @@
             flex-direction: row;
             justify-content: flex-end;
             align-items: center
-
-
         }
 
         .old-answer:hover {
@@ -29,6 +27,9 @@
         body {
             height: 100vh;
             padding: 10px;
+            /* TODO center left or center curretn answer, new answer right, old answer maybe more right left running, with fadeaway for first words */
+            /*padding-left: 5%;*/
+            /*padding-right: 15%;*/
         }
         pre {
             white-space: pre-wrap;
@@ -39,7 +40,6 @@
     </style>
 </head>
 <body>
-    <div class="bla">
 
     <form>
         <div class="container-form">
@@ -51,18 +51,13 @@
             </div>
         </div>
         <!-- Add a hidden input to track if shift+enter is pressed -->
-        <input type="hidden" id="shift-enter-pressed">
+        <!-- <input type="hidden" id="shift-enter-pressed"> -->
     </form>
 
-    <pre id="current_answer"></pre>
-    <pre id="chat_history"></pre>
-
+    <div>
+        <pre id="current_answer"></pre>
     </div>
-
-    
-
-
-
+    <pre id="chat_history"></pre>
     
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
@@ -79,18 +74,20 @@
                 body: JSON.stringify({message: input.value})
             });
 
+            // Add the most recent answer to chat history and hide it
+            //current_answer = document.getElementById("current_answer").outerHTML;
+            // TODO
+            // Add answer to chat history
             const chat_history = document.getElementById('chat_history');
             const newParagraph = document.createElement('p');
             newParagraph.className = "old-answer"
             newParagraph.textContent = input.value;
             newParagraph.style.textAlign = "right";
             newParagraph.style.maxWidth = "100%"; 
-            //chat_history.appendChild(newParagraph);
             chat_history.insertBefore(newParagraph, chat_history.firstChild)
 
             const reader = response.body.getReader();
             let output = "";
-
             while (true) {
                 const { done, value } = await reader.read();
                 output += new TextDecoder().decode(value);
