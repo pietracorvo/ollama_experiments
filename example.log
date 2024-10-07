@@ -1,29 +1,106 @@
-2024-10-06 22:06:15,275  * Debugger is active!
-2024-10-06 22:06:15,352  * Debugger PIN: 558-155-685
-2024-10-06 22:06:17,705 ----------------- STARTING APP
-2024-10-06 22:06:17,708 127.0.0.1 - - [06/Oct/2024 22:06:17] "GET / HTTP/1.1" 200 -
-2024-10-06 22:08:13,153 ----------------- STARTING APP
-2024-10-06 22:08:13,154 127.0.0.1 - - [06/Oct/2024 22:08:13] "GET / HTTP/1.1" 200 -
-2024-10-06 22:12:10,004 ----------------- STARTING APP
-2024-10-06 22:12:10,006 127.0.0.1 - - [06/Oct/2024 22:12:10] "GET / HTTP/1.1" 200 -
-2024-10-06 22:15:16,603 ----------------- STARTING APP
-2024-10-06 22:15:16,604 127.0.0.1 - - [06/Oct/2024 22:15:16] "GET / HTTP/1.1" 200 -
-2024-10-06 22:15:23,834 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'öqlmdölsad'}
-2024-10-06 22:15:23,841 Starting new HTTP connection (1): localhost:11434
-2024-10-06 22:15:27,634 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
-2024-10-06 22:15:27,635 Response status code: 200
-2024-10-06 22:15:27,635 127.0.0.1 - - [06/Oct/2024 22:15:27] "POST /answer HTTP/1.1" 200 -
-2024-10-06 22:15:54,318 ----------------- STARTING APP
-2024-10-06 22:15:54,319 127.0.0.1 - - [06/Oct/2024 22:15:54] "GET / HTTP/1.1" 200 -
-2024-10-06 22:15:57,354 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'aöd,d'}
-2024-10-06 22:15:57,357 Starting new HTTP connection (1): localhost:11434
-2024-10-06 22:15:57,871 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
-2024-10-06 22:15:57,872 Response status code: 200
-2024-10-06 22:15:57,872 127.0.0.1 - - [06/Oct/2024 22:15:57] "POST /answer HTTP/1.1" 200 -
-2024-10-06 22:16:44,251 ----------------- STARTING APP
-2024-10-06 22:16:44,253 127.0.0.1 - - [06/Oct/2024 22:16:44] "GET / HTTP/1.1" 200 -
-2024-10-06 22:16:47,500 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'ad,äas,dasd'}
-2024-10-06 22:16:47,501 Starting new HTTP connection (1): localhost:11434
-2024-10-06 22:16:48,095 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
-2024-10-06 22:16:48,096 Response status code: 200
-2024-10-06 22:16:48,096 127.0.0.1 - - [06/Oct/2024 22:16:48] "POST /answer HTTP/1.1" 200 -
+2024-10-07 21:21:22,528  * Debugger is active!
+2024-10-07 21:21:22,529  * Debugger PIN: 111-877-556
+2024-10-07 21:21:24,003 ----------------- STARTING APP
+2024-10-07 21:21:24,005 127.0.0.1 - - [07/Oct/2024 21:21:24] "GET / HTTP/1.1" 200 -
+2024-10-07 21:22:05,972 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'where should i put my styles.css and scripts.js to be afound by myy template in a flask app'}
+2024-10-07 21:22:05,974 Starting new HTTP connection (1): localhost:11434
+2024-10-07 21:22:10,465 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
+2024-10-07 21:22:10,465 Response status code: 200
+2024-10-07 21:22:10,466 127.0.0.1 - - [07/Oct/2024 21:22:10] "POST /answer HTTP/1.1" 200 -
+2024-10-07 21:22:45,582 ----------------- STARTING APP
+2024-10-07 21:22:45,582 127.0.0.1 - - [07/Oct/2024 21:22:45] "GET / HTTP/1.1" 200 -
+2024-10-07 21:22:54,310 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'bla'}
+2024-10-07 21:22:54,312 Starting new HTTP connection (1): localhost:11434
+2024-10-07 21:22:54,724 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
+2024-10-07 21:22:54,724 Response status code: 200
+2024-10-07 21:22:54,724 127.0.0.1 - - [07/Oct/2024 21:22:54] "POST /answer HTTP/1.1" 200 -
+2024-10-07 21:22:59,484 ----------------- STARTING APP
+2024-10-07 21:22:59,487 127.0.0.1 - - [07/Oct/2024 21:22:59] "GET / HTTP/1.1" 200 -
+2024-10-07 21:23:02,397 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'bla'}
+2024-10-07 21:23:02,398 Starting new HTTP connection (1): localhost:11434
+2024-10-07 21:23:02,594 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
+2024-10-07 21:23:02,595 Response status code: 200
+2024-10-07 21:23:02,595 127.0.0.1 - - [07/Oct/2024 21:23:02] "POST /answer HTTP/1.1" 200 -
+2024-10-07 21:23:26,839 ----------------- STARTING APP
+2024-10-07 21:23:26,840 127.0.0.1 - - [07/Oct/2024 21:23:26] "GET / HTTP/1.1" 200 -
+2024-10-07 21:23:29,302 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'alksdökad'}
+2024-10-07 21:23:29,306 Starting new HTTP connection (1): localhost:11434
+2024-10-07 21:23:29,857 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
+2024-10-07 21:23:29,858 Response status code: 200
+2024-10-07 21:23:29,858 127.0.0.1 - - [07/Oct/2024 21:23:29] "POST /answer HTTP/1.1" 200 -
+2024-10-07 21:23:47,287 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'which language was this'}
+2024-10-07 21:23:47,289 Starting new HTTP connection (1): localhost:11434
+2024-10-07 21:23:47,814 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
+2024-10-07 21:23:47,814 Response status code: 200
+2024-10-07 21:23:47,815 127.0.0.1 - - [07/Oct/2024 21:23:47] "POST /answer HTTP/1.1" 200 -
+2024-10-07 21:24:00,174 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'alksdökad\n'}
+2024-10-07 21:24:00,175 Starting new HTTP connection (1): localhost:11434
+2024-10-07 21:24:00,741 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
+2024-10-07 21:24:00,741 Response status code: 200
+2024-10-07 21:24:00,742 127.0.0.1 - - [07/Oct/2024 21:24:00] "POST /answer HTTP/1.1" 200 -
+2024-10-07 21:25:21,246 ----------------- STARTING APP
+2024-10-07 21:25:21,247 127.0.0.1 - - [07/Oct/2024 21:25:21] "GET / HTTP/1.1" 200 -
+2024-10-07 21:25:23,503 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'alksdökad'}
+2024-10-07 21:25:23,504 Starting new HTTP connection (1): localhost:11434
+2024-10-07 21:25:23,826 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
+2024-10-07 21:25:23,827 Response status code: 200
+2024-10-07 21:25:23,827 127.0.0.1 - - [07/Oct/2024 21:25:23] "POST /answer HTTP/1.1" 200 -
+2024-10-07 21:29:37,144 ----------------- STARTING APP
+2024-10-07 21:29:37,146 127.0.0.1 - - [07/Oct/2024 21:29:37] "GET / HTTP/1.1" 200 -
+2024-10-07 21:29:40,269 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'alks dlkad'}
+2024-10-07 21:29:40,270 Starting new HTTP connection (1): localhost:11434
+2024-10-07 21:29:40,713 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
+2024-10-07 21:29:40,713 Response status code: 200
+2024-10-07 21:29:40,714 127.0.0.1 - - [07/Oct/2024 21:29:40] "POST /answer HTTP/1.1" 200 -
+2024-10-07 21:30:07,240 ----------------- STARTING APP
+2024-10-07 21:30:07,242 127.0.0.1 - - [07/Oct/2024 21:30:07] "GET / HTTP/1.1" 200 -
+2024-10-07 21:30:10,044 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'Alms clasc'}
+2024-10-07 21:30:10,046 Starting new HTTP connection (1): localhost:11434
+2024-10-07 21:30:10,556 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
+2024-10-07 21:30:10,557 Response status code: 200
+2024-10-07 21:30:10,557 127.0.0.1 - - [07/Oct/2024 21:30:10] "POST /answer HTTP/1.1" 200 -
+2024-10-07 21:31:59,709 ----------------- STARTING APP
+2024-10-07 21:31:59,711 127.0.0.1 - - [07/Oct/2024 21:31:59] "GET / HTTP/1.1" 200 -
+2024-10-07 21:32:02,192 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'a,ms dm,as dm'}
+2024-10-07 21:32:02,195 Starting new HTTP connection (1): localhost:11434
+2024-10-07 21:32:02,867 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
+2024-10-07 21:32:02,868 Response status code: 200
+2024-10-07 21:32:02,868 127.0.0.1 - - [07/Oct/2024 21:32:02] "POST /answer HTTP/1.1" 200 -
+2024-10-07 21:32:15,126 ----------------- STARTING APP
+2024-10-07 21:32:15,127 127.0.0.1 - - [07/Oct/2024 21:32:15] "GET / HTTP/1.1" 200 -
+2024-10-07 21:32:17,956 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'a,ms lasd'}
+2024-10-07 21:32:17,959 Starting new HTTP connection (1): localhost:11434
+2024-10-07 21:32:18,383 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
+2024-10-07 21:32:18,383 Response status code: 200
+2024-10-07 21:32:18,383 127.0.0.1 - - [07/Oct/2024 21:32:18] "POST /answer HTTP/1.1" 200 -
+2024-10-07 21:32:40,424 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'no'}
+2024-10-07 21:32:40,428 Starting new HTTP connection (1): localhost:11434
+2024-10-07 21:32:40,839 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
+2024-10-07 21:32:40,839 Response status code: 200
+2024-10-07 21:32:40,840 127.0.0.1 - - [07/Oct/2024 21:32:40] "POST /answer HTTP/1.1" 200 -
+2024-10-07 21:32:48,952 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'fuck you'}
+2024-10-07 21:32:48,955 Starting new HTTP connection (1): localhost:11434
+2024-10-07 21:32:49,397 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
+2024-10-07 21:32:49,397 Response status code: 200
+2024-10-07 21:32:49,397 127.0.0.1 - - [07/Oct/2024 21:32:49] "POST /answer HTTP/1.1" 200 -
+2024-10-07 21:33:01,217 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'no'}
+2024-10-07 21:33:01,220 Starting new HTTP connection (1): localhost:11434
+2024-10-07 21:33:01,610 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
+2024-10-07 21:33:01,610 Response status code: 200
+2024-10-07 21:33:01,611 127.0.0.1 - - [07/Oct/2024 21:33:01] "POST /answer HTTP/1.1" 200 -
+2024-10-07 21:40:38,841 ----------------- STARTING APP
+2024-10-07 21:40:38,843 127.0.0.1 - - [07/Oct/2024 21:40:38] "GET / HTTP/1.1" 200 -
+2024-10-07 21:40:45,675 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'ands nasd'}
+2024-10-07 21:40:45,678 Starting new HTTP connection (1): localhost:11434
+2024-10-07 21:40:49,380 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
+2024-10-07 21:40:49,380 Response status code: 200
+2024-10-07 21:40:49,381 127.0.0.1 - - [07/Oct/2024 21:40:49] "POST /answer HTTP/1.1" 200 -
+2024-10-07 21:42:46,777 ----------------- STARTING APP
+2024-10-07 21:42:46,779 127.0.0.1 - - [07/Oct/2024 21:42:46] "GET / HTTP/1.1" 200 -
+2024-10-07 21:42:48,340 ----------------- STARTING APP
+2024-10-07 21:42:48,340 127.0.0.1 - - [07/Oct/2024 21:42:48] "GET / HTTP/1.1" 200 -
+2024-10-07 21:42:51,279 Prompting llm API with: {'model': 'llama3.2', 'prompt': 'alsdljasnldasd'}
+2024-10-07 21:42:51,282 Starting new HTTP connection (1): localhost:11434
+2024-10-07 21:42:51,898 http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
+2024-10-07 21:42:51,898 Response status code: 200
+2024-10-07 21:42:51,899 127.0.0.1 - - [07/Oct/2024 21:42:51] "POST /answer HTTP/1.1" 200 -

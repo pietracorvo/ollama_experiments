@@ -16,8 +16,9 @@
         .container-form {
             display: flex;
             flex-direction: row;
-            justify-content: flex-end;
-            align-items: center
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
         }
 
         .old-answer:hover {
@@ -44,7 +45,7 @@
     <form>
         <div class="container-form">
             <div>
-                <textarea id="input" placeholder="Enter your message" cols="50"></textarea>
+                <textarea id="input" placeholder="I am llama3.2, how can I help you?" cols="50"></textarea>
             </div>
             <div style="padding: 5px">
                 <button type="submit" >Send</button>
@@ -54,7 +55,7 @@
         <!-- <input type="hidden" id="shift-enter-pressed"> -->
     </form>
 
-    <div>
+    <div style="padding-left: 5%;padding-right: 5%;">
         <pre id="current_answer"></pre>
     </div>
     <pre id="chat_history"></pre>
