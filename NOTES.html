@@ -15,209 +15,24 @@ curl http://localhost:11434/api/generate -d '{
   "prompt":" Why is the colour of sea blue ?"
 }'
 
-
 # now build a little web app to chat
 
 
 
 
-
-
-<pre id="current_answer"><p>Here's an example of how you can achieve this using HTML and CSS. We'll use the <code>sticky</code> layout mode in CSS to keep the banner at the top, even when scrolling.</p>
-    <p><strong>HTML:</strong></p>
-    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
-    &lt;html lang="en"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;Sticky Banner&lt;/title&gt;
-        &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;!-- The banner container --&gt;
-        &lt;div class="banner-container"&gt;
-            &lt;form&gt;
-                &lt;textarea id="input" placeholder="Enter your message" cols="50"&gt;&lt;/textarea&gt;
-                &lt;button type="submit"&gt;Send&lt;/button&gt;
-                &lt;!-- Add a hidden input to track if shift+enter is pressed --&gt;
-                &lt;input type="hidden" id="shift-enter-pressed"&gt;
-            &lt;/form&gt;
-        &lt;/div&gt;
-    
-        &lt;!-- The content container with sticky scrolling --&gt;
-        &lt;div class="content-container"&gt;
-            &lt;!-- Your long text here --&gt;
-            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.&lt;/p&gt;
-            &lt;p&gt;Cras mattis consequat libero, sit amet faucibus leo luctus sit amet. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
-            &lt;!-- Add more text here --&gt;
-        &lt;/div&gt;
-    
-        &lt;script src="script.js"&gt;&lt;/script&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-    </code></pre>
-    <p><strong>CSS (in style.css file):</strong></p>
-    <pre><code class="language-css">/* Global styles */
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-    
-    body {
-        font-family: Arial, sans-serif;
-        height: 100vh; /* Make the body full screen */
-        overflow-y: hidden; /* Hide vertical scrollbar */
-    }
-    
-    /* The banner container */
-    .banner-container {
-        position: sticky;
-        top: 0;
-        background-color: #f2f2f2; /* Set a background color for the banner */
-        padding: 20px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    }
-    
-    .banner-container form {
-        display: flex;
-        flex-direction: column; /* Vertically align the form elements */
-    }
-    
-    .banner-container textarea {
-        width: 100%; /* Make the textarea full screen */
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the textarea */
-    }
-    
-    .banner-container button[type="submit"] {
-        padding: 10px 20px;
-        background-color: #333; /* Set a dark color for the button */
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    
-     banner-container input[type="hidden"] {
-        display: none; /* Hide the hidden input */
-    }
-    
-    /* The content container with sticky scrolling */
-    .content-container {
-        padding-top: 50px; /* Add some space for the banner */
-        overflow-y: auto; /* Enable vertical scrollbar on hover */
-    }
-    
-    .content-container p {
-        margin-bottom: 20px;
-    }
-    </code></pre>
-    <p><strong>JavaScript (in script.js file):</strong></p>
-    <pre><code class="language-javascript">// Add an event listener to the form submit event
-    document.querySelector('.banner-container form').addEventListener('submit', function(event) {
-        // Get the value of the textarea
-        const inputValue = document.getElementById('input').value;
-    
-        // Get the value of the hidden input
-        const shiftEnterPressed = document.getElementById('shift-enter-pressed').value;
-    
-        // Do something with the input values...
-        console.log(`Input Value: ${inputValue}`);
-        console.log(`Shift+Enter Pressed: ${shiftEnterPressed}`);
-    
-        // Prevent the default form submission behavior
-        event.preventDefault();
-    });
-    </code></pre>
-    <p>This code creates a sticky banner at the top of the page, even when scrolling. The <code>position: sticky;</code> property is used to achieve this effect. The banner container has a subtle shadow and background color to make it stand out.</p>
-    <p>The JavaScript code adds an event listener to the form submit event, which gets triggered when you press the "Send" button. It retrieves the values of the textarea and the hidden input, logs them to the console, and prevents the default form submission behavior using <code>event.preventDefault();</code>.</p>
-    <p>Note that this code assumes you want to trigger the JavaScript code on every form submission, even if you're pressing shift+enter. If you only want to trigger it when the user actually clicks the "Send" button, you can modify the event listener to use <code>document.querySelector('.banner-container form').addEventListener('click', ...);</code> instead.</p>
-    <p>I hope this helps! Let me know if you have any questions or need further modifications.</p>
-    </pre>
+# before 2024-10-17
+# TODO overhaul ui
 
 
 
 
+# 2024-10-17
+# use local https://www.youtube.com/watch?v=FQTCLOUnIzI https://github.com/technovangelist/videoprojects/tree/2dd82eb1d8012e196f2e80b867744ebd42a10281/2024-09-10-buildrag/python
+# to give rag capabilities using chrome docker container
+# run latest chroma container on port 8000
+docker run -d -p 8000:8000 -v chroma-data:/chromadb/data chromadb/chroma
 
 
 
-
-
-
-
-
-<pre id="current_answer"><p>I'd be happy to provide some CSS advice. Here are a few general tips:</p>
-<ol>
-<li><strong>Use meaningful class names</strong>: Instead of using generic class names like "container" or "header", use descriptive names that tell the purpose of the element. For example, ".header-wrapper" or ".about-section".</li>
-<li><strong>Use a preprocessor</strong>: Consider using a CSS preprocessor like Sass or Less to write more efficient and modular CSS code.</li>
-<li><strong>Follow the BEM (Block-Element-Modifier) naming convention</strong>: This naming convention can help you organize your classes in a logical and maintainable way.</li>
-<li><strong>Use a clear and consistent layout structure</strong>: Use a grid system or a flexbox layout to create a responsive design that adapts to different screen sizes.</li>
-<li><strong>Use CSS variables (custom properties)</strong>: Instead of hardcoding colors, font sizes, etc., use CSS variables to make your code more maintainable and easier to update.</li>
-<li><strong>Optimize images</strong>: Use image compression tools like TinyPNG or ImageOptim to reduce the file size of your images and improve page load times.</li>
-<li><strong>Avoid inline styles</strong>: Instead of using inline styles (e.g. <code>&lt;div style="color: blue;"&gt;</code>), use an external stylesheet to separate presentation from structure.</li>
-<li><strong>Use a reset stylesheet</strong>: Use a CSS reset stylesheet like Normalize.css or Reset CSS to normalize browser defaults and ensure consistent layout across different browsers.</li>
-<li><strong>Test for accessibility</strong>: Test your website's accessibility by using tools like Lighthouse, WAVE, or axe to identify areas that need improvement.</li>
-<li><strong>Keep it organized</strong>: Keep your CSS code organized and concise by using a clear and consistent coding style.</li>
-</ol>
-<p>Additionally, here are some best practices for common CSS elements:</p>
-<ul>
-<li>Use <code>display: flex</code> instead of <code>position: absolute</code> when possible.</li>
-<li>Use <code>grid</code> instead of <code>float</code> or <code>position</code> when creating layouts that need to adapt to different screen sizes.</li>
-<li>Use <code>font-size</code> and <code>line-height</code> together to set a font size that looks good on different devices.</li>
-<li>Use <code>margin-top</code> and <code>margin-bottom</code> together to control spacing between elements.</li>
-</ul>
-<p>What specific CSS-related question or problem do you have?</p>
-</pre>
-
-
-
-
-
-
-
-
-<pre id="current_answer"><p>Here's an example of minimalist CSS styling for your question-answer app:</p>
-<pre><code class="language-css">body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9; /* Light gray background */
-}
-
-.answer {
-  margin-top: 20px;
-  text-align: center;
-  padding: 10px;
-  border-bottom: 1px solid #ccc; /* Horizontal rule for readability */
-}
-
-.question {
-  width: 80%;
-  float: right;
-  clear: both;
-  margin-right: 20px;
-}
-
-.question span {
-  font-weight: bold;
-  font-size: 18px;
-  color: #333; /* Dark gray text color */
-}
-
-.answer p {
-  font-size: 16px;
-  color: #666; /* Light gray text color */
-}
-</code></pre>
-<p>In this example:</p>
-<ul>
-<li>The <code>.answer</code> class centers the answer text and adds a subtle bottom border for readability.</li>
-<li>The <code>.question</code> class aligns the question text to the right and gives it some margin from the answer.</li>
-<li>The <code>span</code> element within the <code>.question</code> class is used to display the bold question text.</li>
-<li>The <code>.answer p</code> class styles the paragraph text within the <code>.answer</code> class.</li>
-</ul>
-<p>You can adjust these styles as needed to fit your app's design.</p>
-</pre>
 
 

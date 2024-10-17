@@ -29,6 +29,7 @@ def answer():
 
     session = requests.Session()
     try:
+        # TODO add try to rm old ollama container and rebuild new one if error here
         response = session.post(API_URL, json=data, stream=True)
         response.raise_for_status()
         status_code = response.status_code
