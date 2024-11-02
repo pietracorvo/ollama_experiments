@@ -22,9 +22,9 @@ def index():
 
 @app.route("/answer", methods=["GET", "POST"])
 def answer():
-    data = request.get_json()
-    message = data["message"]
-    data = {"model": "llama3.2", "prompt": message}
+    input_data = request.get_json()
+    message = input_data["message"]
+    data = {"model": "llama3.2", "prompt": message, 'stream': True}
     logger.info(f'Prompting llm API with: {data}')
 
     session = requests.Session()
