@@ -6,7 +6,3 @@ __pycache__
 # Here i store random stuff
 /OLD_CHATS/*
 /OLD/*
-
-# Not implemented yet
-rag_functions.py
-rag_importdocs.py
